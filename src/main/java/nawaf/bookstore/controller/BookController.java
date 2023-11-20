@@ -43,7 +43,7 @@ public class BookController {
 
     @PostMapping("/books/add") //post book
     @ResponseStatus(HttpStatus.CREATED)
-    public void addProject(@RequestBody @Valid Book book){
+    public void addBook(@RequestBody @Valid Book book){
         bookService.saveBook(book);
     }
 

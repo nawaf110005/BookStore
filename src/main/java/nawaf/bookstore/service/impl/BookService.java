@@ -54,6 +54,8 @@ public class BookService implements BookServiceInterface {
                 existingBook.setImg((String) updates.get("img"));
             } else if (updates.containsKey("author")) {
                 existingBook.setAuthor((String) updates.get("author"));
+            }else if (updates.containsKey("price")) {
+                existingBook.setPrice((Double) updates.get("price"));
             }else if (updates.containsKey("releaseDate")) {
                 existingBook.setReleaseDate((LocalDate) updates.get("releaseDate"));
             }

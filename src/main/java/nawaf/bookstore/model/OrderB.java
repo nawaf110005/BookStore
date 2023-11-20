@@ -1,7 +1,5 @@
 package nawaf.bookstore.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -13,7 +11,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Order {
+public class OrderB {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
