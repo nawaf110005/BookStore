@@ -2,6 +2,7 @@ package nawaf.bookstore.controller;
 
 import lombok.extern.slf4j.Slf4j;
 import nawaf.bookstore.DTO.UserVerifyDTO;
+import nawaf.bookstore.model.Book;
 import nawaf.bookstore.repository.UserRepository;
 import nawaf.bookstore.service.impl.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import nawaf.bookstore.model.User;
 
 import javax.validation.Valid;
+import java.util.List;
 
 @RestController
 @RequestMapping("/auth")
@@ -33,7 +35,7 @@ public class AuthController {
     public UserVerifyDTO verifyToken(Authentication authentication) {
         String email = (String) authentication.getPrincipal();
         User userFromDb = userRepository.findByEmail(email);
-        UserVerifyDTO userVerifyDTO = new UserVerifyDTO(userFromDb.getName());
+        UserVerifyDTO userVerifyDTO = new UserVerifyDTO(userFromDb.getName(), userFromDb.getId());
 //        Gson gson = new Gson();
 //        String userDetails = gson.toJson(userVerifyDTO);
         return userVerifyDTO;

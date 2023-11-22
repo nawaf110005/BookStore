@@ -6,6 +6,8 @@ import nawaf.bookstore.service.impl.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.data.domain.Sort;
+
 
 import javax.validation.Valid;
 import java.util.List;
@@ -30,11 +32,11 @@ public class BookController {
         return bookRepository.findAll();
     }
 
-//    @GetMapping("/books/news") //get All books by release date
-//    @ResponseStatus(HttpStatus.OK)
-//    public List<Book> getAllBooksByReleaseDate() {
-//        return bookRepository.findAllByReleaseDate();
-//    }
+    @GetMapping("/books/news") //get All books by release date
+    @ResponseStatus(HttpStatus.OK)
+    public List<Book> getAllBooksByReleaseDate() {
+        return bookRepository.findAll(Sort.by("releaseDate").descending());
+    }
     @GetMapping("/books/category/{id}") //get All books by category name
     @ResponseStatus(HttpStatus.OK)
     public List<Book> getAllBooksByCategory(@PathVariable(name = "id") String category) {
@@ -46,6 +48,7 @@ public class BookController {
     public void addBook(@RequestBody @Valid Book book){
         bookService.saveBook(book);
     }
+
 
     @DeleteMapping("/books/delete") //delete all books
     public String deleteBooks(){

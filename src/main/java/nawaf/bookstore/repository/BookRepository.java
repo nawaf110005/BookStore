@@ -8,7 +8,8 @@ import java.util.List;
 
 @Repository
 public interface BookRepository extends JpaRepository<Book,Long> {
-//    List<Book> findAllByReleaseDate();
+//    List<Book> findAllOrderByReleaseDateDesc();
     List<Book> findAllByCategory(String category);
+
 
 }

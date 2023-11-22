@@ -22,14 +22,14 @@ public class OrderB {
     private User user;
 
     @ManyToMany
-    @JoinTable(
-            name = "order_book",
-            joinColumns = @JoinColumn(name = "order_id"),
-            inverseJoinColumns = @JoinColumn(name = "book_id")
-    )
+//    @JoinTable(
+//            name = "order_book",
+//            joinColumns = @JoinColumn(name = "order_id"),
+//            inverseJoinColumns = @JoinColumn(name = "book_id")
+//    )
     private List<Book> books;
 
-    private String PickupAddress;
+    private String pickupAddress;
     private String paymentMethod;
     private String pickupDate;
 
