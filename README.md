@@ -149,3 +149,23 @@ The `Book` entity represents books available in the store.
 1. Run the application.
 2. Use the provided endpoints to interact with the API.
 
+
+# Installation Guide
+
+Follow these steps to set up and run the Book Store Backend project locally:
+
+## Prerequisites
+
+Ensure you have the following installed on your machine:
+
+- [Java Development Kit (JDK)](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [Maven](https://maven.apache.org/download.cgi)
+- [Git](https://git-scm.com/downloads)
+
+## Clone the Repository
+
+Open a terminal and run the following command to clone the project repository:
+
+```bash
+git clone https://github.com/your-username/book-store-backend.git   
+
