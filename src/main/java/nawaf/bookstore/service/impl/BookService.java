@@ -33,7 +33,7 @@ public class BookService implements BookServiceInterface {
     }
 
     @Override
-    public void deleteBookById(long id) {
+    public void deleteBookById(long id) {//delet book by id
         Book bookFromDB = bookRepository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Book not found"));
         bookRepository.deleteById(id);
     }
