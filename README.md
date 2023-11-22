@@ -150,6 +150,16 @@ The `Book` entity represents books available in the store.
 2. Use the provided endpoints to interact with the API.
 
 
+# External Tools
+
+## Palette - Design Collaboration
+
+[Palette](https://slides.com/nawafsal/palette) is used for design collaboration and visual representation of the project. It provides a platform for sharing design ideas and collaborating on the visual aspects of the application.
+
+## Trello - Project Management
+
+[Trello](https://trello.com/) is used for project management and task tracking. It provides a visual way to organize tasks, create to-do lists, and manage project workflows. You can view and contribute to the project board [here](link-to-your-trello-board).
+
 # Installation Guide
 
 Follow these steps to set up and run the Book Store Backend project locally:
@@ -167,5 +177,4 @@ Ensure you have the following installed on your machine:
 Open a terminal and run the following command to clone the project repository:
 
 ```bash
-git clone https://github.com/your-username/book-store-backend.git   
-
+git clone https://github.com/your-username/book-store-backend.git
